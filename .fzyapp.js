@@ -21,7 +21,7 @@ function printHelp(){
 
 function processArgs(){
 
-    if(process.argv.length < 3 && typeof process.env.stdin != "undefined"){
+    if(process.argv.length < 3 && typeof process.env.stdin == "undefined"){
         
         printHelp()
         return
