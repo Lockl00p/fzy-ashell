@@ -96,9 +96,9 @@ const ashell = {
 };
 
 // We need the 'require' function:
-ashell.system('echo "$APPDIR" > ~/Documents/.axpder')
-var requireCode = ashell.readFile(ashell.readFile("~/Documents/.axpder") + "/require.js");
-ashell.deleteFile("~/Documents/.axpder");
+ashell.system('echo "$APPDIR" > ~/Documents/axpder')
+var requireCode = ashell.readFile(ashell.readFile("~/Documents/axpder") + "/require.js");
+ashell.deleteFile("~/Documents/axpder");
 eval(requireCode);
 Tarp.require({expose: true}); 
 
