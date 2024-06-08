@@ -97,10 +97,8 @@ const ashell = {
 
 // We need the 'require' function:
 ashell.system('echo "$APPDIR" > ~/Documents/axpder')
-var requireCode = ashell.readFile(ashell.readFile("~/Documents/axpder") + "/require.js");
 ashell.system("rm ~/Documents/axpder");
-eval(requireCode);
-Tarp.require({expose: true}); 
+eval(ashell.readFile(ashell.readFile("~/Documents/axpder") + "/require.js"));
 
 
 var fzy = require("fzy.js");
