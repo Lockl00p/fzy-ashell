@@ -94,5 +94,8 @@ function processArgs(){
 
 function main(){
     processArgs()
-
+    return 0
 }
+
+
+main()
