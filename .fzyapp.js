@@ -109,7 +109,7 @@ require("process")
 let prmpt = '> '
 let lineShown = 10
 let searchstr = ""
-let showScore = false
+let showScr = false
 let showMatches = "";
 
 function printHelp(){
@@ -150,7 +150,7 @@ function processArgs(){
             break;
 
         case "-s":
-            showScore = true
+            showScre = true
             break;
 
         case "-e":
@@ -158,7 +158,7 @@ function processArgs(){
             break;
 
         case "--show-scores":
-            showScore = true
+            showScre = true
             break;
         case "-h":
             printHelp()
