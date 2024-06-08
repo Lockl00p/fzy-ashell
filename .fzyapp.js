@@ -1,4 +1,4 @@
-const jsc = {
+const ashell = {
     // jsc.readFile(filePath: string): string	Open the file at filePath as a UTF-8 file, return the string contents to the JS.
     readFile: function readFile(path) {
         return prompt("jsc\nreadFile\n" + path);
@@ -96,9 +96,9 @@ const jsc = {
 };
 
 // We need the 'require' function:
-jsc.system('echo "$APPDIR" > ~/Documents/.axpder')
-var requireCode = jsc.readFile(jsc.readFile("~/Documents/.axpder") + "/require.js");
-jsc.deleteFile("~/Documents/.axpder");
+ashell.system('echo "$APPDIR" > ~/Documents/.axpder')
+var requireCode = ashell.readFile(ashell.readFile("~/Documents/.axpder") + "/require.js");
+ashell.deleteFile("~/Documents/.axpder");
 eval(requireCode);
 Tarp.require({expose: true}); 
 
