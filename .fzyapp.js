@@ -96,9 +96,9 @@ const jsc = {
 };
 
 // We need the 'require' function:
-jsc.system('echo "$APPDIR" > ~/tmp/.axpder')
-var requireCode = jsc.readFile(jsc.readFile("~/tmp/.axpder") + "/require.js");
-jsc.deleteFile("~/tmp/.axpder");
+jsc.system('echo "$APPDIR" > ~/Documents/.axpder')
+var requireCode = jsc.readFile(jsc.readFile("~/Documents/.axpder") + "/require.js");
+jsc.deleteFile("~/Documents/.axpder");
 eval(requireCode);
 Tarp.require({expose: true}); 
 
