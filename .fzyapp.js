@@ -110,7 +110,7 @@ var prmpt = '> '
 var lineShown = 10
 var searchstr = ""
 var showScre = false
-var showMatches = ""
+var showMat = ""
 
 function printHelp(){
     print("Usage: fzy [OPTION]...\n")
@@ -154,7 +154,7 @@ function processArgs(){
             break;
 
         case "-e":
-            showMatches = nextarg
+            showMat = nextarg
             break;
 
         case "--show-scores":
@@ -182,7 +182,7 @@ function processArgs(){
                         searchstr = splitarg[1]
                         break;
                     case "--show-matches":
-                        showMatches = splitarg[1]
+                        showMat = splitarg[1]
                         break;
                     
                     default:
