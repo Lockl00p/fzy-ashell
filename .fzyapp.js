@@ -109,7 +109,7 @@ require("process")
 let prmpt = '> '
 let lineShown = 10
 let searchstr = ""
-let showScr = false
+let showScre = false
 let showMatches = "";
 
 function printHelp(){
