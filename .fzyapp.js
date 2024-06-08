@@ -110,7 +110,7 @@ var prmpt = '> '
 var lineShown = 10
 var searchstr = ""
 var showScre = false
-var showMatches = "";
+var showMatches = ""
 
 function printHelp(){
     print("Usage: fzy [OPTION]...\n")
