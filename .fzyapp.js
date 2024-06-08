@@ -106,11 +106,11 @@ Tarp.require({expose: true});
 var fzy = require("fzy.js");
 require("process")
 
-let prmpt = '> '
-let lineShown = 10
-let searchstr = ""
-let showScre = false
-let showMatches = "";
+var prmpt = '> '
+var lineShown = 10
+var searchstr = ""
+var showScre = false
+var showMatches = "";
 
 function printHelp(){
     print("Usage: fzy [OPTION]...\n")
