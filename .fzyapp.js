@@ -14,7 +14,7 @@ function printHelp(){
     print(" -q, --query=QUERY        Use QUERY as the initial search string\n")
     print(" -e, --show-matches=QUERY Output the sorted matches of QUERY\n")
     print(" -s, --show-scores        Show the scores of each match\n")
-    print(" -h, --help     Display this help and exit\n")
+    print(" -h, --help               Display this help and exit\n")
     return
 }
 
@@ -94,7 +94,7 @@ function processArgs(){
 
 function main(){
     processArgs()
-    return 0
+    return 
 }
 
 
