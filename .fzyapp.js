@@ -6,6 +6,13 @@ var lineShown = 10
 var searchstr = ""
 var showScre = false
 var showMat = ""
+var running = true;
+var selected = -1;
+var list = process.env.STDIN.split("\n")
+var sortedlist = [];
+
+var rtnval = "";
+
 
 function printHelp(){
     print("Usage: fzy [OPTION]...\n")
@@ -18,13 +25,14 @@ function printHelp(){
     return
 }
 
+var {sortBy} = require("lodash");
 
 function processArgs(){
 
-    if(process.argv.length < 3 && typeof process.env.stdin == "undefined"){
+    if(process.argv.length < 3 && typeof process.env.STDIN == "undefined"){
         
         printHelp()
-        return
+        return 1
     }
 
     for (let index = 0; index < process.argv.length; index++) {
@@ -57,11 +65,11 @@ function processArgs(){
             break;
         case "-h":
             printHelp()
-            return
+            return 1
             break;
         case "--help":
             printHelp()
-            return
+            return 1
             break;
         
         default:
@@ -92,8 +100,44 @@ function processArgs(){
     
 }
 
+
+function newinp(e){
+    jsc.system("clear");
+
+    if(e.key == "Enter"){
+        if (selected >= 0){
+            rtnval = sortedlist[selected]
+            return
+        }
+    }
+    else if(e.key == "Backspace"){
+        searchstr.replace(searchstr.charAt(searchstr.length - 1),"")
+    }
+    else 
+    {
+        searchstr = searchstr + e.key
+    }
+
+    sortedlist = list.filter((s) => fzy.hasMatch(s))
+    sortedlist = sortBy(list, (s) => -fzy.score(searchstr, s));
+    print(prmpt + searchstr)
+    if(showScre){
+        list.forEach((x) =>{
+            print('(' + fzy.score(x,list) + ') ' + x)
+        })    
+    }
+    list.forEach((x) =>)
+}
+
 function main(){
-    processArgs()
+    if(processArgs() == 1){
+        return
+    }
+    window.addEventListener('keydown',)
+    while (running){
+        
+    }
+
     return 
 }
 
