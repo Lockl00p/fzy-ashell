@@ -25,7 +25,7 @@ function printHelp(){
     return
 }
 
-var {sortBy} = require("lodash");
+var {sortBy, split} = require("lodash");
 
 function processArgs(){
 
