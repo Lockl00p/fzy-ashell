@@ -120,20 +120,24 @@ function newinp(e){
 
     sortedlist = list.filter((s) => fzy.hasMatch(s))
     sortedlist = sortBy(list, (s) => -fzy.score(searchstr, s));
-    print(prmpt + searchstr)
+    print(prmpt + searchstr + "\n")
     if(showScre){
         list.forEach((x) =>{
-            print('(' + fzy.score(x,list) + ') ' + x)
+            print('(' + fzy.score(x,list) + ') ' + x + "\n")
         })    
     }
-    list.forEach((x) =>)
+    else{
+        list.forEach((x) =>{
+            print(x + "\n")
+        })    
+    }
 }
 
 function main(){
     if(processArgs() == 1){
         return
     }
-    window.addEventListener('keydown',)
+    window.addEventListener('keydown',(e) => newinp(e))
     while (running){
         
     }
