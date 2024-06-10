@@ -12,6 +12,9 @@
     "Blaine Bublitz <blaine.bublitz@gmail.com> (https://github.com/phated)",
     "Mathias Bynens <mathias@qiwi.be> (https://mathiasbynens.be/)"
   ],
+  "files": [
+    "index.js"
+  ],
   "repository": "lodash/lodash",
   "scripts": { "test": "echo \"See https://travis-ci.org/lodash/lodash-cli for testing details.\"" }
 }
